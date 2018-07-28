@@ -1,4 +1,6 @@
-import java.util.*;
+package tester;
+
+import java.util.Random;
 
 public class Yahtzee {
 
@@ -16,7 +18,10 @@ public class Yahtzee {
             amount = 0;
         }
 
-        boolean check() { return amount == 5; }
+        boolean check() {
+            return amount == 5;
+        }
+
         void checkForTriples(int[] dices)
         {
             if (amount < 3)
@@ -62,9 +67,12 @@ public class Yahtzee {
 
     public static void main(String[] args) {
         Yahtzee game = new Yahtzee();
-        int[] tryArray = new int[10000];
 
-        for (int i = 0; i<10000; i++)
+        int sampleSize = 10000;
+
+        int[] tryArray = new int[sampleSize];
+
+        for (int i = 0; i<sampleSize; i++)
         {
             int tryCount = 0;
             while (!game.play())
@@ -74,10 +82,9 @@ public class Yahtzee {
         }
 
         double sum = 0;
-        for (int i = 0; i<10000; i++)
+        for (int i = 0; i<sampleSize; i++)
             sum += tryArray[i];
 
-        System.out.println("Average tries: " + sum/10000);
-
+        System.out.println("Average tries: " + sum/sampleSize);
     }
 }

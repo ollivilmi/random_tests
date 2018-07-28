@@ -42,6 +42,11 @@ public class MeasureExercises {
         return objects[0];
     }
 
+    private Measurable largest(List<Measurable> objects) {
+        objects.sort(((o1, o2) -> (int)(o2.getMeasure() - o1.getMeasure())));
+        return objects.get(0);
+    }
+
     private Measurable smallest(Measurable[] objects) {
         Arrays.sort(objects, MeasureExercises::compareMeasurables);
         return objects[0];
