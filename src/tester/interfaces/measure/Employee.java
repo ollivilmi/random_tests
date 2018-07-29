@@ -5,7 +5,7 @@ import java.util.Random;
 public class Employee implements Measurable {
     private String name;
     private double salary;
-    private static Random random = new Random();
+    protected static Random random = new Random();
 
     public Employee(String name, double salary) {
         this.name = name;

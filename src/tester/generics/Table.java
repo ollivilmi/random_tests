@@ -6,7 +6,7 @@ import java.util.List;
 public class Table<K, V> {
     ArrayList<Entry<K, V>> list = new ArrayList<>();
 
-    public class Entry<K, V> {
+    private class Entry<K, V> {
         K key;
         V value;
 
@@ -34,7 +34,7 @@ public class Table<K, V> {
     public List<Entry> get(K key)
     {
         List<Entry> entries = new ArrayList<>();
-        list.forEach(kvEntry -> { if (kvEntry.key == key) entries.add(kvEntry); });
+        list.forEach(kvEntry -> { if (kvEntry.key.equals(key)) entries.add(kvEntry); });
         return entries;
     }
 
