@@ -9,7 +9,7 @@ public class Repeater {
     {
         // Method references vs lambdas
         repeat(1, this::greeter);
-        repeat(1, () -> message("Hello world"));
+        repeat(1, () -> message("FileSearch world"));
         repeat(2, i -> System.out.println("Countdown: " + (1-i)));
     }
 
@@ -26,7 +26,7 @@ public class Repeater {
 
     private void greeter()
     {
-        System.out.println("Hello world");
+        System.out.println("FileSearch world");
     }
 
     private void message(String msg)

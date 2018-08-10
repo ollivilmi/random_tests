@@ -10,7 +10,7 @@ public class Delay {
     {
         int delay = reader.nextInt();
         messageWithDelay(delay, "Goodbye, cruel world");
-        messageWithDelay(0, "Hello, world");
+        messageWithDelay(0, "FileSearch, world");
         taskWithDelay(300, () -> System.out.println("General task with delay"));
         taskWithDelay(700, Delay::printASCII);
     }
